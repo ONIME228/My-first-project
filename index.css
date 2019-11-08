@@ -1,6 +1,5 @@
 body{
     font-family:Arial;
-    width:auto;
 }
 @font-face {
     font-family:rufina-bold;
@@ -30,17 +29,18 @@ body{
     .menu-right{
         display:flex;
         flex-basis:auto;
-        width:350px;
+        border:1px solid black;
 }
 
     .menu-left{
         display:flex;
         flex-basis:auto;
-        width:350px;
+        border:1px solid black;
 }
 nav>div{
- border:1px solid white;
+ border:1px solid black;
  padding:10px 15px 10px 15px;
+ width:100%;
 }
 nav.menu>div>a{
     text-decoration:none;
@@ -104,11 +104,11 @@ select.country{
 }
 .main-page{
     display:flex;
-    width:1272px;
+    width:66%;
                     background-color:reenyellow;
     flex-direction:row;
     position:relative;
-    left:324px;
+    left:17%;
     margin-top:93px;
     border-bottom:1px dashed gainsboro;
 }
@@ -120,7 +120,7 @@ select.country{
     }
         [class^="element-first"]{
             padding-bottom:60px;
-            width:400px;
+            width:auto;
             display:flex;
             flex-direction:column;
             align-items:center;
@@ -166,7 +166,7 @@ select.country{
                 line-height:25px;
                 text-align:center;
                 color:grey;
-                width:350px;
+                width:auto;
                 font-family:Arial;
                 margin-top:0;
                 margin-bottom:25px;
@@ -183,7 +183,7 @@ select.country{
                 position:relative;
             }
         [class^="element-second"]{
-            width:400px;
+            width:auto;
             padding-bottom:60px;
             display:flex;
             flex-direction:column;
@@ -196,7 +196,7 @@ select.country{
                         background-color:ink;
     }
         [class^="element-third"]{
-            width:321px;
+            width:auto;
             margin-bottom:60px;
             display:flex;
             flex-direction:column;
@@ -352,7 +352,6 @@ select.country{
     .insta-sheet{
         display:flex;
         flex-direction:row;
-        width:100%;
         margin-top:20px;    
     }
     div[class^="insta-bar"]{
