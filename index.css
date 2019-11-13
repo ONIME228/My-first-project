@@ -20,25 +20,50 @@ body{
  color:lightgray;
  font-size:10px;
 }
-.menu{
+@media (min-width: 1281px){
+    .menu{
     font-size:9px;     
     display:flex;
     justify-content:center;
     font-size:10px;
+    }
 }
+@media (min-width: 1281px){ 
     .menu-right{
-        display:flex;
-        flex-basis:auto;
-        border:1px solid black;
-}
-
+    display:flex;
+    width:350px;
+    }
+}    
+@media (min-width: 1281px){
     .menu-left{
-        display:flex;
-        flex-basis:auto;
-        border:1px solid black;
+    display:flex;
+    flex-basis:auto;
+    width:350px;
+    }
+}
+@media (max-width: 1280px){
+    .menu{
+    font-size:9px;     
+    display:flex;
+    justify-content:center;
+    font-size:10px;
+    flex:1;
+    }
+}
+@media (max-width: 1280px){ 
+    .menu-right{
+    display:flex;
+    justify-content: flex-start;
+    }
+}    
+@media (max-width: 1280px){
+    .menu-left{
+    display:flex;
+    flex-basis:auto;
+    justify-content:flex-end;
+    }
 }
 nav>div{
- border:1px solid black;
  padding:10px 15px 10px 15px;
  width:100%;
 }
@@ -55,11 +80,11 @@ nav.menu>div>a:hover{
 
 input[type="search"]{
     border:none;
+    border-bottom:1px solid gainsboro;
 }
 button.right-sign-in{
     background-color:white;
     border:none;
-    word-wrap:;
 }
 img.menu-left-icons{
  padding-left:10px;
@@ -101,23 +126,73 @@ select.country{
     font-family:'Slabo 27px';
     color:white;
     font-size:40px;
-}
-.main-page{
+    font-weight:400;
+    margin:0;
     display:flex;
-    width:66%;
-                    background-color:reenyellow;
-    flex-direction:row;
-    position:relative;
-    left:17%;
-    margin-top:93px;
-    border-bottom:1px dashed gainsboro;
+    flex-direction: column;
+    align-items: center;
 }
-    .first-column{
-         display:flex;
-         flex-direction:column;
-                            background-color:ed;
-         margin-right:26px;
+@media (min-width:1281px) {
+    .main-page{
+        display:flex;
+                    background-color:greenyello;
+        position:relative;
+        padding-top:93px;
+        border-bottom:1px dashed gainsboro;
+        justify-content: space-around;
     }
+    .first-column{
+        display:flex;
+        flex-direction:column;
+                    background-color:re;
+        padding-right:26px;
+        padding-left:200px;
+        width:400px;
+    }
+    .second-column{
+        display:flex;
+        flex-direction:column;
+                       background-color:blueviole;
+        padding-right:121px;
+        width:400px;
+    }
+    .third-column{
+        display:flex;
+        flex-direction:column;
+                           background-color:pin;
+        width:321px;
+        padding-right:200px;
+    }
+}
+@media (max-width:1280px){
+    .main-page{
+        display:flex;
+                    background-color:reenyellow;
+        flex-direction:column;
+        position:relative;
+        padding-top:93px;
+        border-bottom:1px dashed gainsboro;
+        align-items: center;
+    }
+    .first-column{
+        display:flex;
+        flex-direction:column;
+                           background-color:ed;
+        width:400px;
+    }
+    .second-column{
+        display:flex;
+        flex-direction:column;
+                       background-color:lueviolet;
+        width:400px;
+        }
+    .third-column{
+        display:flex;
+        flex-direction:column;
+                           background-color:ink;
+        width:321px;
+    }
+}    
         [class^="element-first"]{
             padding-bottom:60px;
             width:auto;
@@ -130,22 +205,18 @@ select.country{
                 position: relative;
                 width:100%;
             }
-            input.button{
+            button.share{
                 position:absolute;
                 bottom:55px;
-                left:25px;
+                left:19px;
+                background-color:inherit;
+                border:none;
             }
             a.anchor{
                 position:absolute;
                 bottom:25px;
                 left:25px;
-            }
-            .second-column{
-             display:flex;
-             flex-direction:column;
-                            background-color:lueviolet;
-             margin-right:121px;
-            }
+            }  
             .line-first{
                 border-bottom:1px solid grey;
                 width:auto;
@@ -169,7 +240,6 @@ select.country{
                 width:auto;
                 font-family:Arial;
                 margin-top:0;
-                margin-bottom:25px;
             }
             .underlined{
                 font-size:12px;
@@ -189,12 +259,7 @@ select.country{
             flex-direction:column;
             align-items:center;
             flex-wrap:wrap
-        }
-    .third-column{
-     display:flex;
-     flex-direction:column;
-                        background-color:ink;
-    }
+        }    
         [class^="element-third"]{
             width:auto;
             margin-bottom:60px;
@@ -217,17 +282,9 @@ select.country{
             .grey{
                 color:grey;
             }
-            
-            article>div{
+            .margin-bottom{
                 margin-bottom:25px;
-            }
-            article>h1{
-                margin-bottom:25px;
-                margin-top:0px;
-            }
-            div>span>a>img{
-                padding-right:1px;
-                padding-left:4px;
+                margin-top:0;
             }
         .element-third-2{
             background-color:#f5f5f5;
@@ -236,7 +293,6 @@ select.country{
             align-items: flex-start;
             padding-left:20px;
             padding-right:20px;
-            width:auto;
         }
             .newsletter{
                 margin-bottom:15px;
@@ -249,14 +305,14 @@ select.country{
                 margin-right:0;
                 padding-right:0;
                 padding-left:10px;
-                height:34px;
+                height:33px;
                 width:180px;
                 background-color:#f5f5f5;
                 border:1px solid grey; 
                 float:left;
                 font-style: italic;
             }
-            input.news-submit{
+            button.news-submit-button{
                 background-color:black;
                 color:white;
                 border:2px solid black;
@@ -265,7 +321,7 @@ select.country{
                 font-size:12px;
                 float:left;
             }
-            input.news-submit::after{
+            button.news-submit-button::after{
                 content:"";
                 display:table;
                 clear:both;
@@ -275,8 +331,12 @@ select.country{
             }
         .element-third-4{
             display:flex;
-            flex-direction:column;
+            flex-direction:row;
             width:auto;
+        }
+        .instagram-column{
+            display:flex;
+            flex-direction:column;
         }
             .aside-box{
                 display:flex;
@@ -291,8 +351,6 @@ select.country{
                 color:grey;
                 font-style:italic;
                 font-weight:400;
-                margin-top:0;
-                margin-bottom:0;
             }
             .space{
                 margin-bottom:50px;
@@ -312,7 +370,6 @@ select.country{
                 font-family:rufina-bold;
                 border-bottom:1px solid grey;
                 padding-bottom:5px;
-                margin-bottom:25px;
                 margin-top:0;
             }
             .posts-aside{
@@ -346,13 +403,15 @@ select.country{
         font-family:rufina-bold;
         font-size:30px;
         text-align:center;
-        display:block;
         margin:40px;
     }
+    
     .insta-sheet{
         display:flex;
         flex-direction:row;
-        margin-top:20px;    
+        margin-top:20px;
+        width:100%;
+        overflow:hidden;    
     }
     div[class^="insta-bar"]{
         display:flex;
@@ -362,7 +421,7 @@ select.country{
         display:flex;
         flex-direction:row;
     }
-    .footer{
+    footer{
         display:flex;
         width:100%; 
     }
